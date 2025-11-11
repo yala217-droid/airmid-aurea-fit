@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "El impulso de hoy",
+    "image": "assets/post-1.jpg",
+    "affirmation": "Mi disciplina me sostiene; mi energía me guí­a.",
+    "cta": "Haz 10 sentadillas con sonrisa "
+  },
+  {
+    "id": 2,
+    "title": "Respira y avanza",
+    "image": "assets/post-2.jpg",
+    "affirmation": "Inhalo calma, exhalo poder.",
+    "cta": "1 minuto de respiración profunda + estiramiento."
+  },
+  {
+    "id": 3,
+    "title": "Pequeños pasos",
+    "image": "assets/post-3.jpg",
+    "affirmation": "Hoy honro mi cuerpo con movimiento.",
+    "cta": "Camina 5 minutos ahora mismo."
+  },
+  {
+    "id": 4,
+    "title": "El impulso de hoy",
+    "image": "assets/post-1.jpg",
+    "affirmation": "Mi disciplina me sostiene; mi luz me guía.",
+    "cta": "Haz 10 sentadillas con sonrisa "
+  },
+  {
+    "id": 5,
+    "title": "Respira y avanza",
+    "image": "assets/post-2.jpg",
+    "affirmation": "Inhalo calma, exhalo poder.",
+    "cta": "1 minuto de respiración profunda + estiramiento."
+  },
+  {
+    "id": 6,
+    "title": "Pequeños pasos",
+    "image": "assets/post-3.jpg",
+    "affirmation": "Hoy honro mi cuerpo con movimiento.",
+    "cta": "Camina 5 minutos ahora mismo."
+  },
+  {
+    "id": 7,
+    "title": "El impulso de hoy",
+    "image": "assets/post-1.jpg",
+    "affirmation": "Mi disciplina me sostiene; mi luz me guía.",
+    "cta": "Haz 10 sentadillas con sonrisa "
+  },
+  {
+    "id": 8,
+    "title": "Respira y avanza",
+    "image": "assets/post-2.jpg",
+    "affirmation": "Inhalo calma, exhalo poder.",
+    "cta": "1 minuto de respiración profunda + estiramiento."
+  },
+  {
+    "id": 9,
+    "title": "Pequeños pasos",
+    "image": "assets/post-3.jpg",
+    "affirmation": "Hoy honro mi cuerpo con movimiento.",
+    "cta": "Camina 5 minutos ahora mismo."
+  },
+  {
+    "id": 10,
+    "title": "El impulso de hoy",
+    "image": "assets/post-1.jpg",
+    "affirmation": "Mi disciplina me sostiene; mi energía me guía.",
+    "cta": "Haz 10 sentadillas con sonrisa "
+  }
+]

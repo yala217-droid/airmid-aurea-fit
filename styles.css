@@ -1,0 +1,19 @@
+:root{
+  --bg:#0c241e; --card:#132d25; --gold:#ebc934; --text:#edf2ef;
+}
+*{box-sizing:border-box}
+body{margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif; background:var(--bg); color:var(--text);}
+header{padding:20px; text-align:center; border-bottom:1px solid rgba(255,255,255,.08)}
+h1{margin:0; font-weight:800;}
+.tagline{opacity:.8; margin:.25rem 0 1rem}
+.ghost{background:transparent; border:1px solid var(--gold); color:var(--gold); padding:.5rem .9rem; border-radius:10px; cursor:pointer}
+main{max-width:780px; margin:0 auto; padding:20px}
+#card{background:var(--card); padding:16px; border-radius:14px; border:1px solid rgba(255,255,255,.08)}
+#card h2{margin-top:0}
+#postImg{width:100%; border-radius:12px; border:1px solid rgba(255,255,255,.07)}
+#affirmation{font-size:1.1rem; line-height:1.5; margin:.8rem 0}
+.cta{padding:.75rem; border-left:4px solid var(--gold); background:rgba(235,201,52,.08); border-radius:8px}
+.actions{display:flex; gap:.5rem; justify-content:center; margin-top:.8rem}
+.actions button{padding:.6rem .9rem; border-radius:10px; border:1px solid rgba(255,255,255,.15); background:transparent; color:var(--text); cursor:pointer}
+#decree,#about{margin-top:20px; background:var(--card); padding:16px; border-radius:14px; border:1px solid rgba(255,255,255,.08)}
+footer{padding:20px; text-align:center; opacity:.8}
