@@ -1,41 +1,113 @@
+/* === PALETA AIRMID ÁUREA FIT === */
 :root{
-  --bg:#0c241e; --card:#132d25; --gold:#ebc934; --text:#edf2ef;
-}
-*{box-sizing:border-box}
-body{margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Arial, sans-serif; background:var(--bg); color:var(--text);}
-header{padding:20px; text-align:center; border-bottom:1px solid rgba(255,255,255,.08)}
-h1{margin:0; font-weight:800;}
-.tagline{opacity:.8; margin:.25rem 0 1rem}
-.ghost{background:transparent; border:1px solid var(--gold); color:var(--gold); padding:.5rem .9rem; border-radius:10px; cursor:pointer}
-main{max-width:780px; margin:0 auto; padding:20px}
-#card{background:var(--card); padding:16px; border-radius:14px; border:1px solid rgba(255,255,255,.08)}
-#card h2{margin-top:0}
-#postImg{width:100%; border-radius:12px; border:1px solid rgba(255,255,255,.07)}
-#affirmation{font-size:1.1rem; line-height:1.5; margin:.8rem 0}
-.cta{padding:.75rem; border-left:4px solid var(--gold); background:rgba(235,201,52,.08); border-radius:8px}
-.actions{display:flex; gap:.5rem; justify-content:center; margin-top:.8rem}
-.actions button{padding:.6rem .9rem; border-radius:10px; border:1px solid rgba(255,255,255,.15); background:transparent; color:var(--text); cursor:pointer}
-#decree,#about{margin-top:20px; background:var(--card); padding:16px; border-radius:14px; border:1px solid rgba(255,255,255,.08)}
-footer{padding:20px; text-align:center; opacity:.8}
-/* --- BOTONES ESTILO A: Verde + dorado --- */
-.btn-aa {
-    display: block;
-    width: 90%;
-    margin: 12px auto;
-    padding: 14px 20px;
-    background: linear-gradient(135deg, #6ecf9c 0%, #4cbf84 100%);
-    color: #f9e4a6;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 14px;
-    border: 2px solid #d8b35a;
-    text-decoration: none;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    transition: 0.3s ease;
+  --verde-oscuro: #0c241e;
+  --verde-medio: #184132;
+  --verde-claro: #9fd8c0;
+
+  --oro-suave: #f3d27a;
+  --oro-intenso: #d9b241;
+  --oro-brillo: #ffe9b0;
+
+  --texto: #f3f7f5;
 }
 
-.btn-aa:hover {
-    transform: scale(1.03);
-    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+/* === RESET === */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* === FONDO GENERAL === */
+body{
+  background: radial-gradient(circle at top, #184132 0%, #0c241e 90%);
+  min-height:100vh;
+  color: var(--texto);
+  padding-bottom: 40px;
+}
+
+/* === HEADER === */
+header{
+  text-align:center;
+  padding:24px 12px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+header h1{
+  font-size:1.7rem;
+  font-weight:800;
+  color: var(--oro-brillo);
+  text-shadow:0 0 6px rgba(255,215,130,0.5);
+}
+
+.tagline{
+  font-size:0.95rem;
+  opacity:.8;
+}
+
+/* === TARJETAS === */
+section{
+  background: rgba(255,255,255,0.04);
+  margin:18px auto;
+  padding:18px;
+  width:90%;
+  max-width:650px;
+  border-radius:18px;
+  backdrop-filter: blur(6px);
+  border:1px solid rgba(255,255,255,0.08);
+  box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* === BOTONES PRINCIPALES === */
+.btn-aa{
+  display:block;
+  text-align:center;
+  padding:14px;
+  margin:10px auto;
+  width:92%;
+  background: linear-gradient(135deg, var(--oro-intenso), var(--oro-suave));
+  color:#2c2410;
+  font-weight:700;
+  border-radius:14px;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,0.12);
+  box-shadow:0 4px 12px rgba(0,0,0,0.25);
+  transition:0.2s;
+}
+
+.btn-aa:hover{
+  transform:scale(1.03);
+  box-shadow:0 6px 15px rgba(0,0,0,0.35);
+}
+
+/* === BOTONES DE ACCIÓN (anterior - compartir - siguiente) === */
+.actions button{
+  padding:10px 14px;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:10px;
+  color:var(--texto);
+  cursor:pointer;
+  transition:0.2s;
+}
+
+.actions button:hover{
+  background:rgba(255,255,255,0.20);
+}
+
+/* === IMAGEN PRINCIPAL === */
+#postImg{
+  width:100%;
+  border-radius:12px;
+  margin:12px 0;
+  box-shadow:0 10px 18px rgba(0,0,0,0.25);
+}
+
+/* === FOOTER === */
+footer{
+  text-align:center;
+  margin-top:30px;
+  opacity:.7;
+  font-size:0.8rem;
 }
