@@ -1,1 +1,153 @@
 
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test de Fuerza — Airmid Áurea Fit</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .test-box{
+      background:rgba(255,255,255,0.07);
+      padding:18px;
+      border-radius:14px;
+      margin-bottom:18px;
+      border:1px solid rgba(255,255,255,0.08);
+    }
+    select{
+      width:100%;
+      padding:10px;
+      border-radius:10px;
+      border:none;
+      margin-top:8px;
+      background:#ffffffd9;
+    }
+    .result-box{
+      background:#c99a2b22;
+      border-left:4px solid #ebc934;
+      padding:16px;
+      margin-top:20px;
+      border-radius:10px;
+      display:none;
+    }
+    button{
+      width:100%;
+      margin-top:20px;
+      padding:12px;
+      border-radius:12px;
+      background:linear-gradient(135deg,#c99a2b,#f3d27a);
+      color:#2c2410;
+      border:none;
+      font-weight:600;
+      cursor:pointer;
+    }
+  </style>
+</head>
+
+<body class="aa-page">
+  <main class="aa-inner">
+
+    <a href="../index.html" class="aa-back-link">← Volver a la pantalla principal</a>
+
+    <!-- HERO -->
+    <section class="aa-card aa-card-hero">
+      <h1>Test de Fuerza</h1>
+      <p class="aa-sub">
+        Evalúa tu nivel actual y mide tu progreso con este test sencillo pero muy efectivo.
+      </p>
+    </section>
+
+    <!-- PARTE SUPERIOR -->
+    <section class="test-box">
+      <h2>1. Fuerza tren superior</h2>
+      <p>¿Cuántas flexiones completas puedes hacer sin parar?</p>
+      <select id="flexiones">
+        <option value="">Selecciona…</option>
+        <option value="1">0 – 5</option>
+        <option value="2">6 – 12</option>
+        <option value="3">13 – 20</option>
+        <option value="4">21 – 30</option>
+        <option value="5">Más de 30</option>
+      </select>
+    </section>
+
+    <!-- CORE -->
+    <section class="test-box">
+      <h2>2. Resistencia del core</h2>
+      <p>¿Cuánto tiempo puedes mantener una plancha?</p>
+      <select id="plancha">
+        <option value="">Selecciona…</option>
+        <option value="1">Menos de 20 seg</option>
+        <option value="2">20 – 40 seg</option>
+        <option value="3">40 – 60 seg</option>
+        <option value="4">1 – 2 min</option>
+        <option value="5">Más de 2 min</option>
+      </select>
+    </section>
+
+    <!-- PIERNAS -->
+    <section class="test-box">
+      <h2>3. Fuerza tren inferior</h2>
+      <p>¿Cuántas sentadillas completas puedes hacer seguidas?</p>
+      <select id="sentadillas">
+        <option value="">Selecciona…</option>
+        <option value="1">0 – 10</option>
+        <option value="2">11 – 20</option>
+        <option value="3">21 – 35</option>
+        <option value="4">36 – 50</option>
+        <option value="5">Más de 50</option>
+      </select>
+    </section>
+
+    <!-- BOTÓN -->
+    <button onclick="calcularFuerza()">Ver mi nivel</button>
+
+    <!-- RESULTADO -->
+    <section class="result-box" id="resultado">
+      <h2>Resultado de tu test</h2>
+      <p id="textoResultado"></p>
+    </section>
+
+    <footer class="aa-footer">
+      © 2025 Yalaikys González Rodríguez — Airmid Áurea Fit
+    </footer>
+
+  </main>
+
+<script>
+function calcularFuerza(){
+  const f = parseInt(document.getElementById("flexiones").value || 0);
+  const p = parseInt(document.getElementById("plancha").value || 0);
+  const s = parseInt(document.getElementById("sentadillas").value || 0);
+
+  if(f === 0 || p === 0 || s === 0){
+    alert("Por favor completa todas las secciones del test 💛");
+    return;
+  }
+
+  const total = f + p + s;
+  let nivel = "";
+  let mensaje = "";
+
+  if(total <= 6){
+    nivel = "Principiante";
+    mensaje = "Tu cuerpo está listo para iniciar una transformación suave. Trabaja técnica y constancia.";
+  }
+  else if(total <= 10){
+    nivel = "Intermedio";
+    mensaje = "Tienes buena base. Ahora puedes aumentar intensidad y empezar progresión muscular.";
+  }
+  else{
+    nivel = "Avanzado";
+    mensaje = "Tu fuerza es excelente. Estás lista para rutinas más intensas y cargas progresivas.";
+  }
+
+  document.getElementById("textoResultado").innerHTML =
+    `<strong>Nivel: ${nivel}</strong><br><br>${mensaje}`;
+
+  document.getElementById("resultado").style.display = "block";
+}
+</script>
+
+</body>
+</html>
