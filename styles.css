@@ -2,10 +2,11 @@
   --bg: #f7f3ea;          /* crema suave */
   --bg-soft:#fbf7ef;
   --deep:#0b422f;         /* verde oscuro texto */
-  --accent:#1d7c4b;       /* verde principal */
-  --accent-soft:#6fdc6a;  /* verde vivo botones */
-  --gold:#e2c169;
-  --gold-soft:#f5e3b5;
+  /* Colores nuevos basados en el logo */
+  --accent:#9EBC8C;       /* verde suave del logo */
+  --accent-soft:#9EBC8C;  /* mismo verde para botones */
+  --gold:#D7B55A;         /* dorado del borde del logo */
+  --gold-soft:#F3E2B8;    /* dorado suave de fondo */
   --card:#ffffff;
   --radius-card:22px;
   --radius-pill:999px;
@@ -46,8 +47,8 @@ h1{
   display:inline-block;
   padding:12px 32px;
   border-radius:var(--radius-pill);
-  border:1px solid rgba(226,193,105,0.9);
-  background:linear-gradient(135deg,#bdfb70,var(--accent-soft));
+  border:1px solid var(--gold);
+  background:linear-gradient(135deg,#A8C899,var(--accent-soft));
   color:var(--deep);
   font-weight:700;
   cursor:pointer;
@@ -114,8 +115,8 @@ section{
   min-width:90px;
   padding:9px 14px;
   border-radius:var(--radius-pill);
-  border:1px solid rgba(226,193,105,0.8);
-  background:linear-gradient(135deg,#b8f66f,var(--accent-soft));
+  border:1px solid var(--gold);
+  background:linear-gradient(135deg,#A8C899,var(--accent-soft));
   color:var(--deep);
   font-weight:600;
   cursor:pointer;
@@ -149,8 +150,8 @@ section{
   text-align:center;
   text-decoration:none;
   border-radius:var(--radius-pill);
-  background:linear-gradient(135deg,#bdfb70,var(--accent-soft));
-  border:1px solid rgba(226,193,105,0.95);
+  background:linear-gradient(135deg,#A8C899,var(--accent-soft));
+  border:1px solid var(--gold);
   color:var(--deep);
   font-weight:600;
   font-size:0.98rem;
