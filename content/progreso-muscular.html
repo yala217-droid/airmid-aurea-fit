@@ -1,1 +1,354 @@
 
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Progreso muscular — Airmid Áurea Fit</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    .pm-form{
+      background:rgba(255,255,255,0.06);
+      padding:18px;
+      border-radius:16px;
+      border:1px solid rgba(255,255,255,0.1);
+      margin-bottom:18px;
+    }
+    .pm-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+    }
+    .pm-field{
+      display:flex;
+      flex-direction:column;
+      gap:4px;
+      font-size:.9rem;
+    }
+    .pm-field label{
+      opacity:.9;
+    }
+    .pm-field input,
+    .pm-field select,
+    .pm-field textarea{
+      border-radius:10px;
+      border:none;
+      padding:8px 10px;
+      font-size:.95rem;
+    }
+    .pm-field textarea{
+      min-height:70px;
+      resize:vertical;
+    }
+    .pm-btn{
+      margin-top:14px;
+      width:100%;
+      padding:12px;
+      border-radius:12px;
+      border:none;
+      background:linear-gradient(135deg,#c99a2b,#f3d27a);
+      color:#2c2410;
+      font-weight:600;
+      cursor:pointer;
+    }
+    .pm-summary{
+      font-size:.9rem;
+      opacity:.9;
+      margin-bottom:10px;
+    }
+    .pm-list-empty{
+      opacity:.7;
+      font-size:.9rem;
+    }
+    .pm-card{
+      background:rgba(255,255,255,0.06);
+      border-radius:14px;
+      padding:12px;
+      margin-bottom:10px;
+      border:1px solid rgba(255,255,255,0.08);
+      font-size:.9rem;
+    }
+    .pm-card-header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      margin-bottom:6px;
+      font-weight:600;
+    }
+    .pm-badges{
+      display:flex;
+      gap:6px;
+      flex-wrap:wrap;
+      margin-bottom:4px;
+    }
+    .pm-badge{
+      font-size:.75rem;
+      padding:3px 7px;
+      border-radius:999px;
+      background:rgba(235,201,52,0.12);
+      border:1px solid rgba(235,201,52,0.4);
+    }
+    .pm-note{
+      opacity:.85;
+    }
+
+    @media (max-width:600px){
+      .pm-grid{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+
+<body class="aa-page">
+  <main class="aa-inner">
+
+    <a href="../index.html" class="aa-back-link">← Volver a la pantalla principal</a>
+
+    <!-- HERO -->
+    <section class="aa-card aa-card-hero">
+      <h1>Progreso muscular</h1>
+      <p class="aa-sub">
+        Registra tus entrenos de fuerza, peso, repeticiones y energía.
+        Tu cuerpo habla: aquí podrás ver cómo avanzas de verdad.
+      </p>
+      <p class="aa-pill">
+        <strong>Lo que se mide, mejora.</strong>
+      </p>
+    </section>
+
+    <!-- FORMULARIO -->
+    <section class="pm-form">
+      <h2>Nuevo registro</h2>
+      <p class="pm-summary">
+        Completa los datos de tu entreno de hoy y guárdalos en tu dispositivo.
+      </p>
+
+      <div class="pm-grid">
+        <div class="pm-field">
+          <label for="pm-fecha">Fecha</label>
+          <input id="pm-fecha" type="date">
+        </div>
+
+        <div class="pm-field">
+          <label for="pm-musculo">Grupo muscular</label>
+          <select id="pm-musculo">
+            <option value="">Selecciona…</option>
+            <option>Pecho</option>
+            <option>Espalda</option>
+            <option>Hombros</option>
+            <option>Bíceps</option>
+            <option>Tríceps</option>
+            <option>Piernas</option>
+            <option>Glúteos</option>
+            <option>Core / Abdomen</option>
+            <option>Full body</option>
+          </select>
+        </div>
+
+        <div class="pm-field">
+          <label for="pm-ejercicio">Ejercicio</label>
+          <input id="pm-ejercicio" type="text" placeholder="Ej: Sentadilla, Press banca…">
+        </div>
+
+        <div class="pm-field">
+          <label for="pm-peso">Peso utilizado (kg)</label>
+          <input id="pm-peso" type="number" min="0" step="0.5" placeholder="Ej: 20">
+        </div>
+
+        <div class="pm-field">
+          <label for="pm-reps">Repeticiones por serie</label>
+          <input id="pm-reps" type="number" min="1" step="1" placeholder="Ej: 10">
+        </div>
+
+        <div class="pm-field">
+          <label for="pm-series">Series completadas</label>
+          <input id="pm-series" type="number" min="1" step="1" placeholder="Ej: 3">
+        </div>
+
+        <div class="pm-field">
+          <label for="pm-energia">Energía (1–5)</label>
+          <select id="pm-energia">
+            <option value="">Selecciona…</option>
+            <option value="1">1 · Muy baja</option>
+            <option value="2">2 · Baja</option>
+            <option value="3">3 · Media</option>
+            <option value="4">4 · Alta</option>
+            <option value="5">5 · Muy alta</option>
+          </select>
+        </div>
+
+        <div class="pm-field">
+          <label for="pm-animo">Estado de ánimo (1–5)</label>
+          <select id="pm-animo">
+            <option value="">Selecciona…</option>
+            <option value="1">1 · Apagada</option>
+            <option value="2">2 · Cansada</option>
+            <option value="3">3 · Neutra</option>
+            <option value="4">4 · Motivada</option>
+            <option value="5">5 · Muy motivada</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="pm-field" style="margin-top:10px;">
+        <label for="pm-notas">Notas (opcional)</label>
+        <textarea id="pm-notas" placeholder="Ej: Hoy subí peso / Me sentí fuerte / Dormí poco…"></textarea>
+      </div>
+
+      <button class="pm-btn" onclick="guardarRegistro()">
+        Guardar registro
+      </button>
+    </section>
+
+    <!-- LISTA DE REGISTROS -->
+    <section class="aa-card">
+      <h2>Historial reciente</h2>
+      <p class="pm-summary">
+        Aquí verás tus últimos entrenos guardados en este dispositivo.
+      </p>
+      <div id="pm-lista">
+        <p class="pm-list-empty">Todavía no hay registros. Empieza guardando tu primer entreno 💛</p>
+      </div>
+    </section>
+
+    <footer class="aa-footer">
+      © 2025 Yalaikys González Rodríguez — Airmid Áurea Fit
+    </footer>
+
+  </main>
+
+<script>
+const STORAGE_KEY = "aaf_progreso_muscular";
+
+function cargarRegistros(){
+  const cont = document.getElementById("pm-lista");
+  cont.innerHTML = "";
+
+  const data = localStorage.getItem(STORAGE_KEY);
+  if(!data){
+    cont.innerHTML = '<p class="pm-list-empty">Todavía no hay registros. Empieza guardando tu primer entreno 💛</p>';
+    return;
+  }
+
+  let registros = [];
+  try{
+    registros = JSON.parse(data);
+  }catch(e){
+    console.error(e);
+  }
+
+  if(!registros.length){
+    cont.innerHTML = '<p class="pm-list-empty">Todavía no hay registros. Empieza guardando tu primer entreno 💛</p>';
+    return;
+  }
+
+  // Mostrar los últimos 10 (del más reciente al más antiguo)
+  const ultimos = registros.slice().reverse().slice(0,10);
+
+  ultimos.forEach(reg => {
+    const div = document.createElement("div");
+    div.className = "pm-card";
+
+    const fechaTexto = reg.fecha || "Sin fecha";
+    const header = `
+      <div class="pm-card-header">
+        <span>${fechaTexto}</span>
+        <span>${reg.musculo || ""}</span>
+      </div>
+    `;
+
+    const peso = reg.peso ? `${reg.peso} kg` : "—";
+    const reps = reg.reps ? `${reg.reps} reps` : "—";
+    const series = reg.series ? `${reg.series} series` : "—";
+    const energia = reg.energia ? `Energía: ${reg.energia}/5` : "";
+    const animo = reg.animo ? `Ánimo: ${reg.animo}/5` : "";
+
+    const badges = `
+      <div class="pm-badges">
+        <span class="pm-badge">${peso}</span>
+        <span class="pm-badge">${reps}</span>
+        <span class="pm-badge">${series}</span>
+        ${energia ? `<span class="pm-badge">${energia}</span>` : ""}
+        ${animo ? `<span class="pm-badge">${animo}</span>` : ""}
+      </div>
+    `;
+
+    const ejercicio = reg.ejercicio ? `<strong>${reg.ejercicio}</strong><br>` : "";
+    const notas = reg.notas ? `<p class="pm-note">${reg.notas}</p>` : "";
+
+    div.innerHTML = header + badges + ejercicio + notas;
+    cont.appendChild(div);
+  });
+}
+
+function guardarRegistro(){
+  const fecha = document.getElementById("pm-fecha").value;
+  const musculo = document.getElementById("pm-musculo").value;
+  const ejercicio = document.getElementById("pm-ejercicio").value.trim();
+  const peso = document.getElementById("pm-peso").value;
+  const reps = document.getElementById("pm-reps").value;
+  const series = document.getElementById("pm-series").value;
+  const energia = document.getElementById("pm-energia").value;
+  const animo = document.getElementById("pm-animo").value;
+  const notas = document.getElementById("pm-notas").value.trim();
+
+  if(!fecha || !musculo || !ejercicio){
+    alert("Por favor completa al menos fecha, grupo muscular y ejercicio 💛");
+    return;
+  }
+
+  const nuevo = {
+    fecha,
+    musculo,
+    ejercicio,
+    peso,
+    reps,
+    series,
+    energia,
+    animo,
+    notas,
+    creadoEn: new Date().toISOString()
+  };
+
+  let registros = [];
+  const data = localStorage.getItem(STORAGE_KEY);
+  if(data){
+    try{
+      registros = JSON.parse(data);
+    }catch(e){
+      console.error(e);
+    }
+  }
+
+  registros.push(nuevo);
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(registros));
+
+  // Limpiar campos principales menos fecha/músculo
+  document.getElementById("pm-ejercicio").value = "";
+  document.getElementById("pm-peso").value = "";
+  document.getElementById("pm-reps").value = "";
+  document.getElementById("pm-series").value = "";
+  document.getElementById("pm-energia").value = "";
+  document.getElementById("pm-animo").value = "";
+  document.getElementById("pm-notas").value = "";
+
+  cargarRegistros();
+  alert("Registro guardado en este dispositivo ✨");
+}
+
+// Poner fecha de hoy por defecto y cargar registros al abrir
+(function init(){
+  const hoy = new Date();
+  const yyyy = hoy.getFullYear();
+  const mm = String(hoy.getMonth()+1).padStart(2,"0");
+  const dd = String(hoy.getDate()).padStart(2,"0");
+  const hoyStr = `${yyyy}-${mm}-${dd}`;
+  const inputFecha = document.getElementById("pm-fecha");
+  if(inputFecha){
+    inputFecha.value = hoyStr;
+  }
+  cargarRegistros();
+})();
+</script>
+
+</body>
+</html>
