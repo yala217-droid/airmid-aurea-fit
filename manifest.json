@@ -1,11 +1,11 @@
 {
   "name": "Airmid Áurea Fit — Motivación diaria",
   "short_name": "Airmid Áurea Fit",
-  "start_url": "index.html",
+  "start_url": "/index.html",
   "display": "standalone",
 
   "background_color": "#fdf7e3",
-  "theme_color": "#fdf7e3",
+  "theme_color": "#9EBC8C",
 
   "icons": [
     {
