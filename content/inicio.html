@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Airmid Áurea Fit – Inicio</title>
 
-  <!-- Estilos sencillos para móvil -->
+  <!-- Estilos globales de la app -->
+  <link rel="stylesheet" href="../styles.css">
+
+  <!-- Estilos específicos solo para esta página de inicio -->
   <style>
     :root {
       --verde-suave: #cfe8d2;
@@ -23,7 +26,8 @@
       padding: 0;
     }
 
-    body {
+    /* NO tocamos el body, para no pisar .page del styles.css */
+    .inicio-body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: radial-gradient(circle at top, #fdfaf3, var(--fondo));
       color: var(--texto-principal);
@@ -199,106 +203,111 @@
     }
 
     @media (min-width: 480px) {
-      body {
+      .inicio-body {
         max-width: 480px;
         margin: 0 auto;
       }
     }
   </style>
 </head>
-<body>
 
-  <header>
-    <div class="app-logo">
-      <div class="app-logo-circle">
-        <div class="app-logo-text">
-          AIRMID<br />
-          ÁUREA<br />
-          FIT
+<body class="page">
+  <div class="page-main inicio-body">
+
+    <header>
+      <div class="app-logo">
+        <div class="app-logo-circle">
+          <div class="app-logo-text">
+            AIRMID<br />
+            ÁUREA<br />
+            FIT
+          </div>
         </div>
       </div>
-    </div>
 
-    <h1 class="heading">Bienvenida a Airmid Áurea Fit</h1>
-    <p class="subheading">
-      Tu espacio de energía, movimiento y motivación para cuidar tu cuerpo,
-      tu mente y tu corazón.
-    </p>
-
-    <div style="text-align:center;">
-      <span class="tagline">Cada día un paso más hacia tu mejor versión</span>
-    </div>
-  </header>
-
-  <main>
-    <section class="card">
-      <h2>¿Qué es Airmid Áurea Fit?</h2>
-      <p>
-        Airmid Áurea Fit es una app creada con amor para acompañarte a
-        <span class="highlight">mover tu cuerpo, elevar tu energía y
-        mejorar tu bienestar</span>, estés donde estés.
-      </p>
-      <p>
-        Aquí encontrarás inspiración diaria, ejercicios sencillos y recordatorios
-        amables para que vuelvas a ti, a tu fuerza y a tu luz dorada interior.
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>Lo que vas a encontrar aquí</h2>
-      <ul class="bullets">
-        <li>Frases y mensajes de motivación para empezar el día con buen ánimo.</li>
-        <li>Ideas de ejercicios suaves para casa, sin complicarte ni necesitar mucho material.</li>
-        <li>Consejos para cuidar tu postura, tu respiración y tu descanso.</li>
-        <li>Un espacio seguro donde recordar que siempre puedes volver a empezar.</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>Quién te acompaña</h2>
-      <p>
-        Soy <span class="highlight">Yalaikys González Rodríguez</span>,
-        creadora de <strong>ViveMejorHoy.net</strong> y del canal
-        <strong>Airmid Áurea</strong>.
-      </p>
-      <p>
-        Esta app nace del deseo profundo de compartir todo lo que me ha ayudado:
-        movimiento consciente, enfoque positivo, hábitos simples y mucho amor
-        por la vida.
-      </p>
-      <p class="author">
-        Caminamos juntas y juntos a tu ritmo. No hace falta hacerlo perfecto:
-        hace falta hacerlo con cariño hacia ti.
-      </p>
-    </section>
-
-    <section class="card">
-      <div class="mini-section-title">Cómo usar esta app</div>
-      <p>
-        Dedica unos minutos al día a entrar aquí, leer una frase, respirar
-        profundo y escoger un pequeño movimiento para tu cuerpo.
-      </p>
-      <p>
-        Un paso cada día crea un cambio real. Tu energía lo siente, tu cuerpo
-        lo agradece y tu corazón lo celebra.
+      <h1 class="heading">Bienvenida a Airmid Áurea Fit</h1>
+      <p class="subheading">
+        Tu espacio de energía, movimiento y motivación para cuidar tu cuerpo,
+        tu mente y tu corazón.
       </p>
 
-      <div class="cta-zone">
-        <!-- Estos enlaces los conectaremos cuando creen esas páginas -->
-        <a href="#" class="btn-primary">Empezar hoy</a>
-        <a href="#" class="btn-secondary">Muy pronto: Ejercicios en casa</a>
+      <div style="text-align:center;">
+        <span class="tagline">Cada día un paso más hacia tu mejor versión</span>
       </div>
-    </section>
+    </header>
 
-    <p class="footer-note">
-      Airmid Áurea Fit · Creado con amor por Yalaikys González Rodríguez ·
-      ViveMejorHoy.net · Canal de YouTube: Airmid Áurea
-   </p>
-    <p class="aa-bottom-nav">
-      <a href="../index.html" class="btn-aa"> Volver al Inicio Airmid Áurea Fit</a>
-</p>
-  </main>
+    <main>
+      <section class="card">
+        <h2>¿Qué es Airmid Áurea Fit?</h2>
+        <p>
+          Airmid Áurea Fit es una app creada con amor para acompañarte a
+          <span class="highlight">mover tu cuerpo, elevar tu energía y
+          mejorar tu bienestar</span>, estés donde estés.
+        </p>
+        <p>
+          Aquí encontrarás inspiración diaria, ejercicios sencillos y recordatorios
+          amables para que vuelvas a ti, a tu fuerza y a tu luz dorada interior.
+        </p>
+      </section>
 
+      <section class="card">
+        <h2>Lo que vas a encontrar aquí</h2>
+        <ul class="bullets">
+          <li>Frases y mensajes de motivación para empezar el día con buen ánimo.</li>
+          <li>Ideas de ejercicios suaves para casa, sin complicarte ni necesitar mucho material.</li>
+          <li>Consejos para cuidar tu postura, tu respiración y tu descanso.</li>
+          <li>Un espacio seguro donde recordar que siempre puedes volver a empezar.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Quién te acompaña</h2>
+        <p>
+          Soy <span class="highlight">Yalaikys González Rodríguez</span>,
+          creadora de <strong>ViveMejorHoy.net</strong> y del canal
+          <strong>Airmid Áurea</strong>.
+        </p>
+        <p>
+          Esta app nace del deseo profundo de compartir todo lo que me ha ayudado:
+          movimiento consciente, enfoque positivo, hábitos simples y mucho amor
+          por la vida.
+        </p>
+        <p class="author">
+          Caminamos juntas y juntos a tu ritmo. No hace falta hacerlo perfecto:
+          hace falta hacerlo con cariño hacia ti.
+        </p>
+      </section>
+
+      <section class="card">
+        <div class="mini-section-title">Cómo usar esta app</div>
+        <p>
+          Dedica unos minutos al día a entrar aquí, leer una frase, respirar
+          profundo y escoger un pequeño movimiento para tu cuerpo.
+        </p>
+        <p>
+          Un paso cada día crea un cambio real. Tu energía lo siente, tu cuerpo
+          lo agradece y tu corazón lo celebra.
+        </p>
+
+        <div class="cta-zone">
+          <a href="../index.html" class="btn-primary">Empezar desde la pantalla principal</a>
+          <a href="../content/ejercicios-casa.html" class="btn-secondary">Muy pronto: Ejercicios en casa</a>
+        </div>
+      </section>
+
+      <p class="footer-note">
+        Airmid Áurea Fit · Creado con amor por Yalaikys González Rodríguez ·
+        ViveMejorHoy.net · Canal de YouTube: Airmid Áurea
+      </p>
+
+      <!-- BOTÓN VERDE IGUAL QUE LOS OTROS -->
+      <div class="aa-bottom-nav">
+        <a href="../index.html" class="btn-aa">
+          ← Volver al Inicio Airmid Áurea Fit
+        </a>
+      </div>
+    </main>
+
+  </div>
 </body>
 </html>
-
