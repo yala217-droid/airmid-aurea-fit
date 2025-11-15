@@ -3,8 +3,10 @@
   "short_name": "Airmid Áurea Fit",
   "start_url": "index.html",
   "display": "standalone",
-  "background_color": "#0c241e",
-  "theme_color": "#0c241e",
+
+  "background_color": "#fdf7e3",
+  "theme_color": "#fdf7e3",
+
   "icons": [
     {
       "src": "assets/icon-192.png",
