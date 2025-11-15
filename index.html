@@ -11,16 +11,22 @@
   <script defer src="app.js"></script>
 </head>
 <body>
-  <header>
-    <h1>💛 Airmid Áurea Fit</h1>
-    <p class="tagline">Armonía vital para cuerpo, mente y corazón</p>
-    <button id="installBtn" class="ghost">Instalar</button>
+  <header class="top-header">
+    <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+      <img src="assets/icon-192.png"
+           alt="Airmid Áurea Fit"
+           style="width:72px; height:72px; border-radius:50%; box-shadow:0 4px 10px rgba(0,0,0,0.18);">
+      <h1>Airmid Áurea Fit</h1>
+      <p class="tagline">Armonía vital para cuerpo, mente y corazón</p>
+      <button id="installBtn" class="ghost">Instalar</button>
+    </div>
   </header>
 
   <main>
-    <!-- Tarjeta principal con la motivación del día -->
-    <section id="card">
-      <h2 id="postTitle">Cargando…</h2>
+
+    <!-- 🔒 SECCIÓN DE MOTIVACIÓN OCULTA (para que app.js funcione, pero no se vea) -->
+    <section id="card" style="display:none;">
+      <h2 id="postTitle">Motivación del día</h2>
       <img id="postImg" alt="Motivación del día" />
       <p id="affirmation"></p>
       <div class="cta" id="cta"></div>
@@ -31,43 +37,50 @@
       </div>
     </section>
 
-    <!-- Decreto del día -->
-    <section id="decree">
+    <section id="decree" style="display:none;">
       <h3>Decreto del día</h3>
       <p>“Mi energía se expande y guía cada paso. Hoy elijo cuidarme con amor.”</p>
     </section>
 
-    <!-- Sobre la app / autora -->
-    <section id="about">
-      <h3>Sobre</h3>
+    <!-- 💚 MENÚ PRINCIPAL DE LA APP -->
+    <section id="menu-principal">
+      <h2 style="text-align:center; margin-bottom:14px;">Explora la app</h2>
+
+      <div style="display:flex; flex-direction:column; gap:10px;">
+
+        <!-- Bloque 1: base -->
+        <a class="btn-aa" href="content/inicio.html">Inicio · Presentación</a>
+        <a class="btn-aa" href="content/frases.html">Frases motivacionales</a>
+        <a class="btn-aa" href="content/ejercicios-casa.html">Ejercicios en casa</a>
+        <a class="btn-aa" href="content/ejercicios-gym.html">Ejercicios de gimnasio</a>
+        <a class="btn-aa" href="content/progreso.html">Mi progreso</a>
+        <a class="btn-aa" href="content/habitos.html">Hábitos saludables</a>
+        <a class="btn-aa" href="content/energia-diaria.html">Energía diaria</a>
+        <a class="btn-aa" href="content/meditacion.html">Meditación & calma</a>
+
+        <!-- Bloque 2: nutrición y rutinas -->
+        <a class="btn-aa" href="content/nutricion-comidas.html">Nutrición & comidas</a>
+        <a class="btn-aa" href="content/rutina-gym.html">Rutina completa de gimnasio</a>
+        <a class="btn-aa" href="content/test-fuerza.html">Test de fuerza</a>
+        <a class="btn-aa" href="content/progreso-muscular.html">Progreso muscular</a>
+
+        <!-- Bloque 3: Legal y privacidad -->
+        <a class="btn-aa" href="content/legal-privacidad.html">Legal & Privacidad</a>
+        <a class="btn-aa" href="content/aviso-legal.html">Aviso legal</a>
+        <a class="btn-aa" href="content/privacidad.html">Política de privacidad</a>
+        <a class="btn-aa" href="content/cookies.html">Política de cookies</a>
+        <a class="btn-aa" href="content/terminos.html">Términos de uso</a>
+        <a class="btn-aa" href="content/uso-responsable.html">Uso responsable del ejercicio</a>
+      </div>
+    </section>
+
+    <!-- SOBRE PEQUEÑITO ABAJO -->
+    <section id="about" style="margin-top:26px;">
+      <h3>Sobre esta app</h3>
       <p>
         App creada por <strong>Yalaikys González Rodríguez</strong> —
         <em>ViveMejorHoy.net</em> / <em>Airmid Áurea Fit</em>.
       </p>
-    </section>
-
-    <!-- MENÚ PRINCIPAL DE NAVEGACIÓN -->
-    <section id="menu-principal" style="margin-top: 24px;">
-      <h3 style="text-align:center; margin-bottom: 10px;">Explora la app</h3>
-
-      <a class="btn-aa" href="content/inicio.html">Inicio · Presentación</a>
-      <a class="btn-aa" href="content/frases.html">Frases motivacionales</a>
-      <a class="btn-aa" href="content/ejercicios-casa.html">Ejercicios en casa</a>
-      <a class="btn-aa" href="content/ejercicios-gym.html">Ejercicios de gimnasio</a>
-      <a class="btn-aa" href="content/progreso.html">Mi progreso</a>
-      <a class="btn-aa" href="content/habitos.html">Hábitos saludables</a>
-      <a class="btn-aa" href="content/energia-diaria.html">Energía diaria</a>
-      <a class="btn-aa" href="content/meditacion.html">Meditación & calma</a>
-      <a class="btn-aa" href="content/nutricion.html">Nutrición & comidas</a>
-      <a class="btn-aa" href="content/rutina-gym.html">Rutina completa de gimnasio</a>
-      <a class="btn-aa" href="content/test-fuerza.html">Test de fuerza</a>
-      <a class="btn-aa" href="content/progreso-muscular.html">Progreso muscular</a>
-      <a class="btn-aa" href="content/legal.html">Legal & Privacidad</a>
-      <a class="btn-aa" href="content/legal.html">Aviso legal</a>
-<a class="btn-aa" href="content/privacidad.html">Política de privacidad</a>
-<a class="btn-aa" href="content/cookies.html">Política de cookies</a>
-<a class="btn-aa" href="content/terminos.html">Términos de uso</a>
-<a class="btn-aa" href="content/consentimiento.html">Uso responsable del ejercicio</a>
     </section>
   </main>
 
@@ -76,3 +89,4 @@
   </footer>
 </body>
 </html>
+
