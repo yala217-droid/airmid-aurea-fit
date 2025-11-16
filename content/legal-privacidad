@@ -1,1 +1,42 @@
 
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Legal & Privacidad — Airmid Áurea Fit</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body class="page">
+  <main class="page-main">
+
+    <header class="page-header">
+      <h1>Legal & Privacidad</h1>
+      <p>
+        Aquí tienes toda la información legal y de uso responsable
+        relacionada con Airmid Áurea Fit.
+      </p>
+    </header>
+
+    <section class="page-card">
+      <h2>Documentos disponibles</h2>
+      <ul>
+        <li><a href="aviso-legal.html">Aviso legal</a></li>
+        <li><a href="privacidad.html">Política de privacidad</a></li>
+        <li><a href="cookies.html">Política de cookies</a></li>
+        <li><a href="terminos.html">Términos de uso</a></li>
+        <li><a href="uso-responsable.html">Uso responsable del ejercicio</a></li>
+      </ul>
+      <p>
+        Te invito a leerlos con calma para saber cómo funciona la app,
+        qué puedes esperar de ella y cómo cuidamos tu bienestar y tu información.
+      </p>
+    </section>
+
+    <div class="aa-bottom-nav">
+      <a href="../index.html" class="btn-aa">← Volver a Inicio Airmid Áurea Fit</a>
+    </div>
+
+  </main>
+</body>
+</html>
