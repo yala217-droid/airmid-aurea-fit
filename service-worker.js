@@ -1,16 +1,29 @@
-// 💛 Airmid Áurea Fit — Service Worker actualizado
-const CACHE_NAME = 'airmid-v5'; // cambia el número cuando hagas una actualización grande
+// 💛 Airmid Áurea Fit — Service Worker actualizado SOLO con lo importante
 
-// Archivos base que queremos que estén disponibles offline
+// ⚠️ Cambia el número cuando hagas cambios grandes en la app
+const CACHE_NAME = 'airmid-v6';
+
+// Archivos que queremos disponibles offline
 const APP_FILES = [
-  '/',
-  '/index.html',
-  '/styles.css',
-  '/app.js',
-  '/manifest.json',
+  '/',                     // raíz
+  '/index.html',           // pantalla principal con el menú
+  '/styles.css',           // estilos generales
+  '/app.js',               // lógica de la app
+  '/manifest.json',        // manifest de la PWA
+
+  // Iconos de la app
   '/assets/icon-192.png',
   '/assets/icon-512.png',
-  '/content/posts.json'
+
+  // Frases / posts motivacionales
+  '/content/posts.json',
+
+  // Páginas que quieres tener offline 💛
+  '/content/inicio.html',
+  '/content/frases.html',
+  '/content/meditacion.html',
+  '/content/ejercicios-casa.html',
+  '/content/ejercicios-gym.html'
 ];
 
 // 📦 INSTALACIÓN — guarda los archivos base en caché
@@ -41,6 +54,9 @@ self.addEventListener('activate', (event) => {
 
 // 🔄 FETCH — intenta primero desde la red y, si falla, usa caché
 self.addEventListener('fetch', (event) => {
+  // Solo manejamos peticiones GET dentro del mismo origen
+  if (event.request.method !== 'GET') return;
+
   event.respondWith(
     fetch(event.request)
       .then((res) => {
@@ -56,3 +72,4 @@ self.addEventListener('fetch', (event) => {
       })
   );
 });
+
