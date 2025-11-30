@@ -234,3 +234,10 @@ footer{
   font-size:.9rem;
   opacity:.85;
 }
+.aa-img-ejercicio {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 10px;
+  margin-bottom: 14px;
+  display: block;
+}
