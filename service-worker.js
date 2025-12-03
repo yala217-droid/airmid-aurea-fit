@@ -1,7 +1,7 @@
 // 💛 Airmid Áurea Fit — Service Worker actualizado SOLO con lo importante
 
 // ⚠️ Cambia el número cuando hagas cambios grandes en la app
-const CACHE_NAME = 'airmid-v6';
+const CACHE_NAME = 'airmid-v7';
 
 // Archivos que queremos disponibles offline
 const APP_FILES = [
